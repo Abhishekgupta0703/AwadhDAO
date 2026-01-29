@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs - AWADH DAO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .blog-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 94, 0, 0.2);
+        border-radius: 10px;
+        padding: 30px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .blog-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 0;
+        background: linear-gradient(180deg, #ff5e00, #00b2ff);
+        transition: height 0.4s ease;
+      }
+      .blog-card:hover::before {
+        height: 100%;
+      }
+      .blog-card:hover {
+        border-color: #ff5e00;
+        box-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
+        transform: translateY(-8px);
+      }
+      .blog-date {
+        color: #ff5e00;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-block;
+        padding: 5px 15px;
+        background: rgba(255, 94, 0, 0.1);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 94, 0, 0.2);
+      }
+      .blog-title {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.4rem;
+        margin: 15px 0;
+        color: #ffffff;
+        line-height: 1.4;
+      }
+      .blog-excerpt {
+        opacity: 0.8;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+      }
+      .read-more {
+        color: #00b2ff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      .read-more:hover {
+        color: #ff5e00;
+        transform: translateX(5px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+      <div class="shape shape-circle"></div>
+      <div class="shape shape-triangle"></div>
+      <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #ff5e00; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #00b2ff; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="20,2 38,14 38,26 20,38 2,26 2,14"
+              fill="none"
+              stroke="url(#logoGradient)"
+              stroke-width="2"
+            />
+            <polygon
+              points="20,8 32,16 32,24 20,32 8,24 8,16"
+              fill="url(#logoGradient)"
+              opacity="0.3"
+            />
+            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
+          </svg>
+          <span class="logo-text">AWADH DAO</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+          <li><a href="governance.html" class="nav-link">Governance</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="docs.html" class="nav-link">Docs</a></li>
+          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+           
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blogs Section -->
+    <section style="padding: 120px 20px 80px; max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Awadh DAO Blog</h2>
+      <p style="text-align: center; opacity: 0.8; font-size: 1.1rem; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Insights, updates, and stories from the Awadh DAO community
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px;">
+        <div class="blog-card">
+          <div class="blog-date">January 15, 2025</div>
+          <h3 class="blog-title">Web3 Fundamentals for Beginners</h3>
+          <p class="blog-excerpt">
+            A comprehensive guide to understanding blockchain, smart contracts, and decentralized finance. Perfect for those just starting their Web3 journey.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">January 10, 2025</div>
+          <h3 class="blog-title">Governance in Action: Our First Proposal</h3>
+          <p class="blog-excerpt">
+            Learn how Awadh DAO made its first major decision through decentralized governance and what it means for our community's future.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">January 5, 2025</div>
+          <h3 class="blog-title">Building Culture in Web3</h3>
+          <p class="blog-excerpt">
+            Exploring how Awadh DAO blends the cultural heritage of Awadh with modern Web3 innovations to create something unique.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">December 28, 2024</div>
+          <h3 class="blog-title">Introducing Awadh DAO</h3>
+          <p class="blog-excerpt">
+            The origin story of Awadh DAO: why we started it, what we're building, and how you can be part of this exciting journey.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">December 20, 2024</div>
+          <h3 class="blog-title">Smart Contract Security Best Practices</h3>
+          <p class="blog-excerpt">
+            Essential security practices for smart contract development shared by our community of experienced developers.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">December 15, 2024</div>
+          <h3 class="blog-title">Community Spotlight: February Events</h3>
+          <p class="blog-excerpt">
+            Check out the exciting events and workshops we have planned for February. Register now to secure your spot!
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">December 10, 2024</div>
+          <h3 class="blog-title">The Future of DAOs: A Manifesto</h3>
+          <p class="blog-excerpt">
+            Our vision for the evolution of decentralized autonomous organizations and how they'll reshape global collaboration.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">December 5, 2024</div>
+          <h3 class="blog-title">NFTs & Community Identity</h3>
+          <p class="blog-excerpt">
+            How NFTs can represent membership and contribution within our DAO while preserving authenticity and value.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">November 30, 2024</div>
+          <h3 class="blog-title">DeFi Protocols We Love</h3>
+          <p class="blog-excerpt">
+            A curated list of the best DeFi protocols being used by our community members and what makes them special.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">November 25, 2024</div>
+          <h3 class="blog-title">Local Impact, Global Vision</h3>
+          <p class="blog-excerpt">
+            How Awadh DAO is creating meaningful change in the local community while participating in global Web3 initiatives.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">November 20, 2024</div>
+          <h3 class="blog-title">Contributor Spotlight: Meet Our Heroes</h3>
+          <p class="blog-excerpt">
+            Featuring interviews with key contributors and learning about what drives them to build with Awadh DAO.
+          </p>
+          <a href="#" class="read-more">Read Article →</a>
+        </div>
+      </div>
+
+      <!-- Featured Article Section -->
+      <div style="margin-top: 100px; padding: 60px 50px; background: linear-gradient(135deg, rgba(255, 94, 0, 0.1), rgba(0, 178, 255, 0.1)); border: 2px solid rgba(255, 94, 0, 0.3); border-radius: 15px;">
+        <h3 style="font-family: 'Orbitron', monospace; font-size: 1.6rem; color: #ff5e00; margin-bottom: 20px;">📌 Featured Read</h3>
+        <h2 style="font-family: 'Orbitron', monospace; font-size: 2rem; margin-bottom: 20px; color: #ffffff;">The Evolution of Community-Driven Innovation</h2>
+        <p style="opacity: 0.9; line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem;">
+          Discover how Awadh DAO is pioneering new models of organization, collaboration, and value creation. From governance structures to tokenomics, we're building the infrastructure for a more equitable Web3 future.
+        </p>
+        <a href="#" style="display: inline-block; padding: 12px 40px; background: linear-gradient(45deg, #ff5e00, #00b2ff); color: white; text-decoration: none; border-radius: 8px; font-weight: 700; transition: all 0.3s ease;">
+          Read Full Article
+        </a>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div style="margin-top: 80px; padding: 60px 40px; background: rgba(255, 94, 0, 0.05); border: 1px solid rgba(255, 94, 0, 0.2); border-radius: 15px; text-align: center;">
+        <h3 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; margin-bottom: 15px;">Stay Updated</h3>
+        <p style="opacity: 0.8; margin-bottom: 30px;">Subscribe to our newsletter for the latest insights, updates, and exclusive content from the Awadh DAO community.</p>
+        <div style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+          <input type="email" placeholder="Enter your email" style="flex: 1; padding: 12px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 94, 0, 0.2); border-radius: 8px; color: white; font-family: 'Rajdhani', sans-serif;">
+          <button style="padding: 12px 40px; background: linear-gradient(45deg, #ff5e00, #00b2ff); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; transition: all 0.3s ease;">Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+        <p class="copyright">
+          © 2025 AWADH DAO. Community-owned. Open by default.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - AWADH DAO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+      <div class="shape shape-circle"></div>
+      <div class="shape shape-triangle"></div>
+      <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #ff5e00; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #00b2ff; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="20,2 38,14 38,26 20,38 2,26 2,14"
+              fill="none"
+              stroke="url(#logoGradient)"
+              stroke-width="2"
+            />
+            <polygon
+              points="20,8 32,16 32,24 20,32 8,24 8,16"
+              fill="url(#logoGradient)"
+              opacity="0.3"
+            />
+            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
+          </svg>
+          <span class="logo-text">AWADH DAO</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+          <li><a href="governance.html" class="nav-link">Governance</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="docs.html" class="nav-link">Docs</a></li>
+          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about" id="about" style="padding-top: 120px">
+      <h2 class="section-title">About Awadh DAO</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Rooted in Culture. Built for Web3.</h2>
+          <p>
+            Awadh DAO is a decentralized community inspired by the cultural
+            legacy of Awadh and the open nature of Web3.
+          </p>
+          <p>
+            Our goal is to create a space where people coordinate, experiment,
+            and build together without centralized control.
+          </p>
+          <p>
+            This DAO is not owned by a company or individuals. It is shaped by
+            its contributors.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="about-graphic"></div>
+        </div>
+      </div>
+
+      <div class="about-content" style="margin-top: 80px">
+        <div class="about-visual">
+          <div class="about-graphic-alt">
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>A DAO for the Long Term</h2>
+          <p>
+            Awadh DAO focuses on sustainability, transparency, and meaningful
+            participation.
+          </p>
+          <p>
+            Every contributor matters. Every idea can evolve into action through
+            collective effort.
+          </p>
+          <p>We are here to build slowly, honestly, and with purpose.</p>
+        </div>
+      </div>
+
+      <!-- Core Values Section -->
+      <div
+        style="
+          margin-top: 100px;
+          padding: 60px 40px;
+          background: rgba(255, 94, 0, 0.05);
+          border: 1px solid rgba(255, 94, 0, 0.2);
+          border-radius: 15px;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        <!-- Hex Decorations -->
+        <div class="hex-decoration" style="top: 10%; left: 5%"></div>
+        <div
+          class="hex-decoration"
+          style="top: 70%; right: 10%; animation-delay: 2s"
+        ></div>
+        <div
+          class="hex-decoration"
+          style="top: 40%; right: 5%; animation-delay: 4s"
+        ></div>
+
+        <h2
+          style="
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #ff5e00, #00b2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        >
+          Our Core Values
+        </h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            position: relative;
+            z-index: 1;
+          "
+        >
+          <div class="glass-card">
+            <h4
+              style="
+                font-family: 'Orbitron', monospace;
+                color: #ff5e00;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+              "
+            >
+              🎯 Purpose-Driven
+            </h4>
+            <p style="opacity: 0.8; line-height: 1.7">
+              Every action serves our mission to create meaningful value and
+              positive impact in the Web3 space.
+            </p>
+          </div>
+          <div class="skew-glass-card">
+            <h4
+              style="
+                font-family: 'Orbitron', monospace;
+                color: #00b2ff;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+              "
+            >
+              🤝 Inclusive
+            </h4>
+            <p style="opacity: 0.8; line-height: 1.7">
+              We welcome diverse perspectives and skills. Barriers are low, and
+              opportunities are abundant for all.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4
+              style="
+                font-family: 'Orbitron', monospace;
+                color: #ff5e00;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+              "
+            >
+              🔍 Transparent
+            </h4>
+            <p style="opacity: 0.8; line-height: 1.7">
+              All decisions, funds, and governance activities are visible and
+              auditable by the community.
+            </p>
+          </div>
+          <div class="skew-glass-card">
+            <h4
+              style="
+                font-family: 'Orbitron', monospace;
+                color: #00b2ff;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+              "
+            >
+              💪 Resilient
+            </h4>
+            <p style="opacity: 0.8; line-height: 1.7">
+              We build systems designed to last, adapt, and thrive through
+              challenges and changes.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4
+              style="
+                font-family: 'Orbitron', monospace;
+                color: #ff5e00;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+              "
+            >
+              🌱 Sustainable
+            </h4>
+            <p style="opacity: 0.8; line-height: 1.7">
+              Thinking long-term, we balance immediate needs with future
+              generations' wellbeing.
+            </p>
+          </div>
+          <div class="skew-glass-card">
+            <h4
+              style="
+                font-family: 'Orbitron', monospace;
+                color: #00b2ff;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+              "
+            >
+              🚀 Innovative
+            </h4>
+            <p style="opacity: 0.8; line-height: 1.7">
+              We embrace experimentation, learn from failures, and push
+              boundaries of what's possible.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision & Mission -->
+      <div
+        class="vm"
+        style="
+          margin-top: 100px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+        "
+      >
+        <div class="gradient-card hover-lift" style="padding: 50px">
+          <h3
+            style="
+              font-family: 'Orbitron', monospace;
+              font-size: 1.8rem;
+              color: #ff5e00;
+              margin-bottom: 20px;
+            "
+          >
+            Our Vision
+          </h3>
+          <p style="opacity: 0.9; line-height: 1.8; font-size: 1.05rem">
+            A world where communities have the power to self-govern, where value
+            is created and shared equitably, and where Web3 technology enables
+            human flourishing at local and global scales.
+          </p>
+        </div>
+        <div class="gradient-card hover-lift" style="padding: 50px">
+          <h3
+            style="
+              font-family: 'Orbitron', monospace;
+              font-size: 1.8rem;
+              color: #00b2ff;
+              margin-bottom: 20px;
+            "
+          >
+            Our Mission
+          </h3>
+          <p style="opacity: 0.9; line-height: 1.8; font-size: 1.05rem">
+            To build a thriving decentralized community rooted in Awadh's
+            cultural heritage, fostering innovation, learning, and collaboration
+            in Web3 while maintaining transparency, inclusivity, and long-term
+            sustainability.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Section -->
+      <div class="timeline" style="margin-top: 100px">
+        <h2
+          style="
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #ff5e00, #00b2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        >
+          Our Journey
+        </h2>
+        <div style="position: relative; padding: 50px 0">
+          <div
+            class="tline"
+            style="
+              position: absolute;
+              left: 50%;
+              top: 0;
+              bottom: 0;
+              width: 2px;
+              background: linear-gradient(180deg, #ff5e00, #00b2ff);
+              transform: translateX(-50%);
+            "
+          ></div>
+
+          <div
+            class="trcard"
+            style="
+              margin-bottom: 10px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: right">
+              <div
+                class="glass-card"
+                style="padding: 30px; display: inline-block; text-align: left"
+              >
+                <h4
+                  style="
+                    font-family: 'Orbitron', monospace;
+                    color: #ff5e00;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Phase 1: Foundation
+                </h4>
+                <p style="opacity: 0.8; font-size: 0.95rem">
+                  Building core infrastructure and attracting initial community
+                  members.
+                </p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+
+          <div
+            class="tlcard"
+            style="
+              margin-bottom: 10px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
+              align-items: center;
+            "
+          >
+            <div></div>
+            <div>
+              <div
+                class="glass-card"
+                style="padding: 30px; display: inline-block"
+              >
+                <h4
+                  style="
+                    font-family: 'Orbitron', monospace;
+                    color: #00b2ff;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Phase 2: Growth
+                </h4>
+                <p style="opacity: 0.8; font-size: 0.95rem">
+                  Expanding governance, launching projects, and building
+                  partnerships.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="trcard"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
+              align-items: center;
+            "
+          >
+            <div style="text-align: right">
+              <div
+                class="glass-card"
+                style="padding: 30px; display: inline-block; text-align: left"
+              >
+                <h4
+                  style="
+                    font-family: 'Orbitron', monospace;
+                    color: #ff5e00;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Phase 3: Maturity
+                </h4>
+                <p style="opacity: 0.8; font-size: 0.95rem">
+                  Global impact, ecosystem leadership, and sustained innovation.
+                </p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+        <p class="copyright">
+          © 2025 AWADH DAO. Community-owned. Open by default.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

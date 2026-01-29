@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - AWADH DAO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .docs-container {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 40px;
+        margin-top: 60px;
+      }
+      .docs-sidebar {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 94, 0, 0.2);
+        border-radius: 10px;
+        padding: 30px;
+        backdrop-filter: blur(10px);
+        height: fit-content;
+        position: sticky;
+        top: 100px;
+      }
+      .docs-sidebar h4 {
+        color: #ff5e00;
+        font-family: 'Orbitron', monospace;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 94, 0, 0.3);
+      }
+      .docs-sidebar a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 0;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+        border-left: 2px solid transparent;
+        padding-left: 10px;
+      }
+      .docs-sidebar a:hover {
+        opacity: 1;
+        color: #00b2ff;
+        border-left-color: #00b2ff;
+      }
+      .docs-content h3 {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.6rem;
+        color: #ff5e00;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .docs-content h4 {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.1rem;
+        color: #00b2ff;
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+      .docs-content p {
+        opacity: 0.8;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+      .docs-content ul {
+        list-style: none;
+        margin-bottom: 20px;
+        padding-left: 20px;
+      }
+      .docs-content li {
+        padding: 8px 0;
+        opacity: 0.8;
+      }
+      .docs-content li::before {
+        content: '▸';
+        color: #ff5e00;
+        margin-right: 10px;
+      }
+      .code-block {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 178, 255, 0.2);
+        border-radius: 5px;
+        padding: 15px;
+        overflow-x: auto;
+        margin: 20px 0;
+        font-family: monospace;
+        font-size: 0.9rem;
+        color: #00b2ff;
+      }
+      @media (max-width: 768px) {
+        .docs-container {
+          grid-template-columns: 1fr;
+        }
+        .docs-sidebar {
+          position: static;
+          display: flex;
+          gap: 20px;
+          overflow-x: auto;
+          padding: 20px;
+        }
+        .docs-sidebar h4 {
+          display: none;
+        }
+        .docs-sidebar a {
+          white-space: nowrap;
+          padding: 8px 15px;
+          border: 1px solid rgba(255, 94, 0, 0.2);
+          border-radius: 5px;
+          padding-left: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+      <div class="shape shape-circle"></div>
+      <div class="shape shape-triangle"></div>
+      <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #ff5e00; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #00b2ff; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="20,2 38,14 38,26 20,38 2,26 2,14"
+              fill="none"
+              stroke="url(#logoGradient)"
+              stroke-width="2"
+            />
+            <polygon
+              points="20,8 32,16 32,24 20,32 8,24 8,16"
+              fill="url(#logoGradient)"
+              opacity="0.3"
+            />
+            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
+          </svg>
+          <span class="logo-text">AWADH DAO</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+          <li><a href="governance.html" class="nav-link">Governance</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="docs.html" class="nav-link">Docs</a></li>
+          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+           
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Documentation Section -->
+    <section style="padding: 120px 20px 80px; max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Documentation</h2>
+
+      <div class="docs-container">
+        <div class="docs-sidebar">
+          <div>
+            <h4>Getting Started</h4>
+            <a href="#getting-started">Introduction</a>
+            <a href="#how-to-join">How to Join</a>
+            <a href="#first-steps">First Steps</a>
+          </div>
+          <div>
+            <h4>Governance</h4>
+            <a href="#governance">Voting</a>
+            <a href="#proposals">Proposals</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="#resources">Links</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <div class="docs-content">
+          <h3 id="getting-started">Getting Started</h3>
+          <h4>Introduction to Awadh DAO</h4>
+          <p>
+            Awadh DAO is a decentralized autonomous organization built on principles of community ownership, transparency, and collaborative decision-making. This documentation will help you understand how to participate and contribute.
+          </p>
+
+          <h4>Core Principles</h4>
+          <ul>
+            <li>Open participation - anyone can join and contribute</li>
+            <li>Transparency - all decisions and discussions are public</li>
+            <li>Decentralization - no single point of authority</li>
+            <li>Meritocracy - contributions are valued based on their quality</li>
+          </ul>
+
+          <h3 id="how-to-join">How to Join</h3>
+          <h4>Step 1: Create Your Profile</h4>
+          <p>Visit our community channels (Discord, Twitter) and introduce yourself. Tell us about your interests and skills.</p>
+
+          <h4>Step 2: Explore Opportunities</h4>
+          <p>Check out active projects and initiatives. Look for areas where you can contribute based on your expertise.</p>
+
+          <h4>Step 3: Start Contributing</h4>
+          <p>Begin with small tasks or discussions. As you get more involved, you can take on larger responsibilities.</p>
+
+          <h3 id="first-steps">First Steps as a Contributor</h3>
+          <ul>
+            <li>Join our Discord server for real-time community interaction</li>
+            <li>Read our governance documents and understand how decisions are made</li>
+            <li>Attend community meetings and workshops</li>
+            <li>Identify areas where you want to contribute</li>
+          </ul>
+
+          <h3 id="governance">Voting & Governance</h3>
+          <h4>Understanding Proposals</h4>
+          <p>
+            Proposals are formal requests for community approval on specific actions, changes, or initiatives. Every community member can submit a proposal.
+          </p>
+
+          <h4>Voting Process</h4>
+          <ul>
+            <li>Proposals are posted with a clear description and timeline</li>
+            <li>Community members review and discuss the proposal</li>
+            <li>Voting occurs on-chain for transparency</li>
+            <li>Results are published and implemented if approved</li>
+          </ul>
+
+          <h3 id="resources">Resources & Links</h3>
+          <h4>Community Channels</h4>
+          <ul>
+            <li><strong>Discord:</strong> Primary hub for discussions and collaboration</li>
+            <li><strong>Twitter/X:</strong> Updates and announcements</li>
+            <li><strong>GitHub:</strong> Code repositories and projects</li>
+          </ul>
+
+          <h3 id="faq">Frequently Asked Questions</h3>
+          <h4>What do I need to join?</h4>
+          <p>You only need an interest in Web3, culture, and community building. No prior experience required!</p>
+
+          <h4>How do I get rewarded for contributions?</h4>
+          <p>Contributions are recognized and rewarded based on community consensus. Rewards can include tokens, recognition, or other forms of compensation.</p>
+
+          <h4>Can I propose ideas?</h4>
+          <p>Absolutely! Anyone can propose ideas. Simply follow the proposal format and submit it to the community for discussion and voting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Start Cards -->
+    <section style="padding: 80px 20px; background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(15, 15, 25, 0.95));">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; background: linear-gradient(45deg, #ff5e00, #00b2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Getting Started Guides
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+          <div class="neon-card stagger-item" style="--stagger-index: 1;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🚀</div>
+            <h3 style="color: #ff5e00; margin-bottom: 15px; font-size: 1.2rem;">New Member Onboarding</h3>
+            <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">Complete guide for new members including wallet setup, joining Discord, understanding governance tokens, and your first contribution.</p>
+          </div>
+          <div class="skew-neon-card stagger-item" style="--stagger-index: 2;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">💻</div>
+            <h3 style="color: #00b2ff; margin-bottom: 15px; font-size: 1.2rem;">Developer Setup</h3>
+            <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">Step-by-step guide for developers: setting up development environment, cloning repositories, running tests, and submitting pull requests.</p>
+          </div>
+          <div class="neon-card stagger-item" style="--stagger-index: 3;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🗳️</div>
+            <h3 style="color: #ff5e00; margin-bottom: 15px; font-size: 1.2rem;">Voting & Governance</h3>
+            <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">Learn how to participate in governance, understand voting mechanics, submit proposals, and influence DAO decisions effectively.</p>
+          </div>
+          <div class="skew-neon-card stagger-item" style="--stagger-index: 4;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🎨</div>
+            <h3 style="color: #00b2ff; margin-bottom: 15px; font-size: 1.2rem;">Content Creation</h3>
+            <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">Guidelines for creating blogs, videos, and social media content. Brand guidelines, tone of voice, and distribution channels.</p>
+          </div>
+          <div class="neon-card stagger-item" style="--stagger-index: 5;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
+            <h3 style="color: #ff5e00; margin-bottom: 15px; font-size: 1.2rem;">Community Building</h3>
+            <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">Learn how to organize events, manage discussion channels, mentor new members, and build a thriving community culture.</p>
+          </div>
+          <div class="skew-neon-card stagger-item" style="--stagger-index: 6;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">💰</div>
+            <h3 style="color: #00b2ff; margin-bottom: 15px; font-size: 1.2rem;">Tokenomics & Rewards</h3>
+            <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">Understanding our token economy, reward mechanisms, token distribution, vesting schedules, and how to maximize your earnings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentation Index -->
+    <section style="padding: 80px 20px;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; background: linear-gradient(45deg, #00b2ff, #ff5e00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Documentation Index
+        </h2>
+        <div style="background: rgba(0, 178, 255, 0.05); border: 1px solid rgba(0, 178, 255, 0.2); border-radius: 10px; padding: 40px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div>
+              <h3 style="color: #ff5e00; margin-bottom: 20px; font-size: 1.3rem;">Core Documentation</h3>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 15px;"><a href="#getting-started" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Getting Started</a></li>
+                <li style="margin-bottom: 15px;"><a href="#governance" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Governance Model</a></li>
+                <li style="margin-bottom: 15px;"><a href="#proposals" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Creating Proposals</a></li>
+                <li style="margin-bottom: 15px;"><a href="#resources" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Resources & Links</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: #ff5e00; margin-bottom: 20px; font-size: 1.3rem;">Additional Resources</h3>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 15px;"><a href="community.html" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Community Page</a></li>
+                <li style="margin-bottom: 15px;"><a href="governance.html" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Governance Details</a></li>
+                <li style="margin-bottom: 15px;"><a href="ecosystem.html" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Ecosystem Overview</a></li>
+                <li style="margin-bottom: 15px;"><a href="blogs.html" style="color: #00b2ff; text-decoration: none; transition: all 0.3s ease;">→ Articles & Updates</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+        <p class="copyright">
+          © 2025 AWADH DAO. Community-owned. Open by default.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

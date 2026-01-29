@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community - AWADH DAO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+      <div class="shape shape-circle"></div>
+      <div class="shape shape-triangle"></div>
+      <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #ff5e00; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #00b2ff; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="20,2 38,14 38,26 20,38 2,26 2,14"
+              fill="none"
+              stroke="url(#logoGradient)"
+              stroke-width="2"
+            />
+            <polygon
+              points="20,8 32,16 32,24 20,32 8,24 8,16"
+              fill="url(#logoGradient)"
+              opacity="0.3"
+            />
+            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
+          </svg>
+          <span class="logo-text">AWADH DAO</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+          <li><a href="governance.html" class="nav-link">Governance</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="docs.html" class="nav-link">Docs</a></li>
+          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Community Section -->
+    <section style="padding: 120px 20px 80px; max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Join Our Community</h2>
+      <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+        <div style="background: rgba(255, 94, 0, 0.05); border: 1px solid rgba(255, 94, 0, 0.2); border-radius: 10px; padding: 40px; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 20px;">🌐</div>
+          <h3 style="font-family: 'Orbitron', monospace; font-size: 1.4rem; color: #ff5e00; margin-bottom: 15px;">Discord</h3>
+          <p style="opacity: 0.8; margin-bottom: 20px;">Join our primary community hub where we discuss ideas, collaborate, and share updates.</p>
+          <a href="#" style="color: #00b2ff; text-decoration: none; font-weight: 600;">Visit Discord →</a>
+        </div>
+
+        <div style="background: rgba(0, 178, 255, 0.05); border: 1px solid rgba(0, 178, 255, 0.2); border-radius: 10px; padding: 40px; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 20px;">🐦</div>
+          <h3 style="font-family: 'Orbitron', monospace; font-size: 1.4rem; color: #00b2ff; margin-bottom: 15px;">Twitter / X</h3>
+          <p style="opacity: 0.8; margin-bottom: 20px;">Follow us for latest updates, announcements, and discussions about Awadh DAO.</p>
+          <a href="#" style="color: #ff5e00; text-decoration: none; font-weight: 600;">Follow Us →</a>
+        </div>
+
+        <div style="background: rgba(255, 94, 0, 0.05); border: 1px solid rgba(255, 94, 0, 0.2); border-radius: 10px; padding: 40px; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 20px;">📍</div>
+          <h3 style="font-family: 'Orbitron', monospace; font-size: 1.4rem; color: #ff5e00; margin-bottom: 15px;">Local Meetups</h3>
+          <p style="opacity: 0.8; margin-bottom: 20px;">Connect with community members in Awadh and collaborate on local initiatives.</p>
+          <a href="#" style="color: #00b2ff; text-decoration: none; font-weight: 600;">Find Events →</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 80px; background: rgba(255, 94, 0, 0.08); border: 1px solid rgba(255, 94, 0, 0.3); border-radius: 10px; padding: 50px; text-align: center;">
+        <h3 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; margin-bottom: 20px; background: linear-gradient(45deg, #ff5e00, #00b2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Become a Contributor</h3>
+        <p style="opacity: 0.8; margin-bottom: 30px; font-size: 1.1rem;">
+          Whether you're a developer, designer, writer, or community organizer, there's a place for you in Awadh DAO.
+        </p>
+        <a href="join-dao.html" style="display: inline-block; padding: 15px 40px; background: linear-gradient(45deg, #ff5e00, #00b2ff); color: white; text-decoration: none; border-radius: 5px; font-weight: 700; font-size: 1rem; transition: all 0.3s ease;">
+          Start Contributing Today
+        </a>
+      </div>
+    </section>
+
+    <!-- Contribution Opportunities -->
+    <section style="padding: 80px 20px; background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(15, 15, 25, 0.95));">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; background: linear-gradient(45deg, #ff5e00, #00b2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Ways to Contribute
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
+          <div class="gradient-card stagger-item" style="--stagger-index: 1;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">⚙️</div>
+            <h3 style="color: #ff5e00; margin-bottom: 10px; font-size: 1.3rem;">Development</h3>
+            <p style="color: #aaa; line-height: 1.6;">Build and maintain smart contracts, web interfaces, and infrastructure that powers Awadh DAO.</p>
+          </div>
+          <div class="skew-gradient-card stagger-item" style="--stagger-index: 2;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🎤</div>
+            <h3 style="color: #00b2ff; margin-bottom: 10px; font-size: 1.3rem;">Governance</h3>
+            <p style="color: #aaa; line-height: 1.6;">Participate in decision-making, propose new initiatives, and shape the future direction of our community.</p>
+          </div>
+          <div class="gradient-card stagger-item" style="--stagger-index: 3;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">📝</div>
+            <h3 style="color: #ff5e00; margin-bottom: 10px; font-size: 1.3rem;">Content & Marketing</h3>
+            <p style="color: #aaa; line-height: 1.6;">Create content, manage social media, and help spread awareness about Awadh DAO globally.</p>
+          </div>
+          <div class="skew-gradient-card stagger-item" style="--stagger-index: 4;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
+            <h3 style="color: #00b2ff; margin-bottom: 10px; font-size: 1.3rem;">Community Support</h3>
+            <p style="color: #aaa; line-height: 1.6;">Help new members onboard, answer questions, and build a welcoming environment for everyone.</p>
+          </div>
+          <div class="gradient-card stagger-item" style="--stagger-index: 5;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">📊</div>
+            <h3 style="color: #ff5e00; margin-bottom: 10px; font-size: 1.3rem;">Analytics & Research</h3>
+            <p style="color: #aaa; line-height: 1.6;">Conduct market research, analyze data, and provide insights to improve our strategies and decisions.</p>
+          </div>
+          <div class="skew-gradient-card stagger-item" style="--stagger-index: 6;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">🎨</div>
+            <h3 style="color: #00b2ff; margin-bottom: 10px; font-size: 1.3rem;">Design & Creative</h3>
+            <p style="color: #aaa; line-height: 1.6;">Create visual content, design UI/UX, and develop creative assets that represent our brand identity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Benefits -->
+    <section style="padding: 80px 20px;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; background: linear-gradient(45deg, #00b2ff, #ff5e00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Why Join Our Community?
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;">
+          <div class="glass-card hover-lift">
+            <h3 style="color: #ff5e00; margin-bottom: 15px; font-size: 1.2rem;">🎓 Learn & Grow</h3>
+            <p style="color: #aaa; font-size: 0.95rem;">Access educational resources, workshops, and mentorship from experienced Web3 professionals in the community.</p>
+          </div>
+          <div class="glass-card hover-lift">
+            <h3 style="color: #00b2ff; margin-bottom: 15px; font-size: 1.2rem;">💼 Career Opportunities</h3>
+            <p style="color: #aaa; font-size: 0.95rem;">Find work opportunities, freelance projects, and potential partnerships with other community members and partners.</p>
+          </div>
+          <div class="glass-card hover-lift">
+            <h3 style="color: #ff5e00; margin-bottom: 15px; font-size: 1.2rem;">🌍 Global Network</h3>
+            <p style="color: #aaa; font-size: 0.95rem;">Connect with like-minded individuals from around the world who share your passion for decentralized governance.</p>
+          </div>
+          <div class="glass-card hover-lift">
+            <h3 style="color: #00b2ff; margin-bottom: 15px; font-size: 1.2rem;">💎 Token Rewards</h3>
+            <p style="color: #aaa; font-size: 0.95rem;">Earn governance tokens through active participation and meaningful contributions to the ecosystem.</p>
+          </div>
+          <div class="glass-card hover-lift">
+            <h3 style="color: #ff5e00; margin-bottom: 15px; font-size: 1.2rem;">🔗 Build Impact</h3>
+            <p style="color: #aaa; font-size: 0.95rem;">Create real impact by building solutions that help underprivileged communities across cultural boundaries.</p>
+          </div>
+          <div class="glass-card hover-lift">
+            <h3 style="color: #00b2ff; margin-bottom: 15px; font-size: 1.2rem;">🎯 Clear Roadmap</h3>
+            <p style="color: #aaa; font-size: 0.95rem;">Follow our transparent roadmap and see exactly how your contributions shape our future direction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="padding: 80px 20px; position: relative; overflow: hidden;">
+      <div class="cyber-pulse" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 94, 0, 0.1), transparent 70%);"></div>
+      <div class="container" style="position: relative; z-index: 2; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px; color: #fff;">Ready to Make a Difference?</h2>
+        <p style="font-size: 1.1rem; color: #aaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Join thousands of passionate individuals building the future of decentralized governance. Your contribution matters, no matter how big or small.
+        </p>
+        <a href="join-dao.html" style="display: inline-block; padding: 15px 50px; background: linear-gradient(45deg, #ff5e00, #00b2ff); color: white; text-decoration: none; border-radius: 5px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid transparent;">
+          Join Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+        <p class="copyright">
+          © 2025 AWADH DAO. Community-owned. Open by default.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
